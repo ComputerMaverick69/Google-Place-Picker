@@ -1,4 +1,4 @@
-# Place Picker
+# Google Place Picker
  A Google Maps Place Picker for Flutter apps
 
 > A flutter package to simplify implementation of picking places from google maps and using the information in app.
@@ -10,7 +10,7 @@
 
 ## Follow Me
 
-[![GitHub followers](https://img.shields.io/github/followers/ComputerMaverick69?style=social)](https://github.com/ComputerMaverick69) [![GitHub Repo stars](https://img.shields.io/github/stars/ComputerMaverick69/Place-Picker?style=social)](https://github.com/ComputerMaverick69/Place-Picker) [![GitHub forks](https://img.shields.io/github/forks/ComputerMaverick69/Place-Picker?style=social)](https://github.com/ComputerMaverick69/Place-Picker) [![Pub Version](https://img.shields.io/pub/v/place_picker)](https://pub.dev/packages/place_picker)
+[![GitHub followers](https://img.shields.io/github/followers/ComputerMaverick69?style=social)](https://github.com/ComputerMaverick69) [![GitHub Repo stars](https://img.shields.io/github/stars/ComputerMaverick69/Google-Place-Picker?style=social)](https://github.com/ComputerMaverick69/Google-Place-Picker) [![GitHub forks](https://img.shields.io/github/forks/ComputerMaverick69/Google-Place-Picker?style=social)](https://github.com/ComputerMaverick69/Google-Place-Picker) [![Pub Version](https://img.shields.io/pub/v/google_place_picker)](https://pub.dev/packages/google_place_picker)
 
 ## Features
 
