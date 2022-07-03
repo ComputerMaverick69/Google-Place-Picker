@@ -1,15 +1,21 @@
 name: place_picker
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+description: A Google Maps place picker for flutter apps.
+version: 1.0.0
+homepage: https://github.com/ComputerMaverick69/Place-Picker
 
 environment:
   sdk: ">=2.17.5 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
+  dio: ^4.0.6
   flutter:
     sdk: flutter
+  geocoding: ^2.0.4
+  geolocator: ^9.0.0
+  get: ^4.6.5
+  google_maps_flutter: ^2.1.8
+  permission_handler: ^10.0.0
 
 dev_dependencies:
   flutter_test:
