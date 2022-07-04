@@ -133,22 +133,22 @@ with the key `io.flutter.embedded_views_preview` and the value `YES`.
 
 ### Basic usage
 
-You can use PlacePicker by pushing to a new page using Navigator, OR put as a child of any widget.
-When the user picks a place on the map, it will return result to 'getResult' with FullAddress type.
+You can use GooglePlacePicker by pushing to a new page using Navigator, OR put as a child of any widget.
+When the user picks a place on the map, it will return result to 'getAddress' with CompleteAddress type.
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:google_maps_pick_place/google_maps_pick_place.dart';
+import 'package:google_place_picker/google_place_picker.dart';
 
 // ...
 Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => GoogleMapsPickPlace(
+        builder: (context) => GooglePlacePicker(
           apiKey: "YOU GOOGLE MAPS API KEY",
-          getResult: (FullAddress result) {
-            print('${result.address}');
-            /// Don't use Navigator.of(context).pop() it's build in the method
+          getAddress: (CompleteAddress completeAddress) {
+            print('${completeAddress.completeAddress}');
+            /// Don't use Navigator.of(context).pop() it's built-in
           },
         ),
       ),
@@ -195,5 +195,6 @@ ios:
 MIT
 
 ## Sponsors
+
 [Timmy Iwoni](https://twitter.com/codemaverick69)
 [Reconnaissance Technologies](https://reconnaissancetechnologies.com)
