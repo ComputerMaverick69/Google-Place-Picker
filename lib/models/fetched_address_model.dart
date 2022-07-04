@@ -7,9 +7,7 @@ class CompleteAddress {
 
   /// Formatted address
   String? completeAddress;
+  String? city;
 
-  CompleteAddress({
-    this.position,
-    this.completeAddress,
-  });
+  CompleteAddress({this.position, this.completeAddress, this.city});
 }

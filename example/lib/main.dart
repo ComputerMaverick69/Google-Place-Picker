@@ -32,6 +32,9 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String address = '';
+  String city = '';
+  String latitude = '';
+  String longitude = '';
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +51,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'Address: $address',
             ),
+            Text(
+              'City: $city',
+            ),
+            Text(
+              'Latitude: $latitude',
+            ),
+            Text(
+              'Longitude: $longitude',
+            ),
             RaisedButton(
               color: Colors.blue,
               elevation: 0.0,
@@ -60,6 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       getAddress: (CompleteAddress completeAddress) {
                         setState(() {
                           address = completeAddress.completeAddress.toString();
+                          city = completeAddress.city.toString();
+                          latitude =
+                              completeAddress.position!.latitude.toString();
+                          longitude =
+                              completeAddress.position!.longitude.toString();
                         });
                       },
                     ),

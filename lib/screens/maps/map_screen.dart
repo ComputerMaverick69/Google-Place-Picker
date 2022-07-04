@@ -172,6 +172,7 @@ class _GooglePlacePickerState extends State<GooglePlacePicker> {
         "${address.locality ?? ''},"
         "${address.postalCode ?? ''},"
         "${address.country ?? ''}";
+    completeAddress.city = address.administrativeArea ?? '';
     marker = customMarker(
       latLng,
       getLocation,
