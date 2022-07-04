@@ -22,9 +22,8 @@ A Google Maps Place Picker for Flutter apps
 - Connectivity handling
 - Permissions handling
 
-## Preview
-
-![](resources/preview.gif)
+## Demo Preview
+![](preview/Google-Place-Picker-Demo.gif)
 
 ## Getting Started
 
