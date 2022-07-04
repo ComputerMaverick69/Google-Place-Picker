@@ -23,6 +23,7 @@ A Google Maps Place Picker for Flutter apps
 - Permissions handling
 
 ## Demo Preview
+
 ![](preview/Google-Place-Picker-Demo.gif)
 
 ## Getting Started
@@ -162,19 +163,19 @@ Navigator.push(
 
 ### Google Maps Pick Place Properties
 
-| Parameter              | Type                   | Description                                                                |
-| ---------------------- | ---------------------- | -------------------------------------------------------------------------- |
-| apiKey                 | String                 | Google Map Api Token                                                       |
-| mapLocale            | MapLocale               | map's language used in search and other widgets                            |
-| getAddress              | Function(CompleteAddress)? | Method of Getting the address and position                                 |
-| initialPosition        | LatLng                 | Initial position of the map in case there's no location and GPS is off     |
-| enableMyLocationButton | bool                   | Enable or disable the My Location button                                   |
-| enableSearchButton     | bool                   | Enable or disable the Search button                                        |
-| loader                 | Widget                 | Widget to show while the map is loading                                    |
-| doneButton             | Widget?                | Widget to show when the map is done loading and apply getResult method     |
-| errorButton            | Widget?                | Widget to show when there's a corruption or there's no internet connection |
-| zoomFactor             | double                 | Zoom factor of the map (default is 5.0)                                    |
-| markerColor            | MarkerColor            | Marker color of the map (default is red)                                   |
+| Parameter              | Type                       | Description                                                                |
+| ---------------------- | -------------------------- | -------------------------------------------------------------------------- |
+| apiKey                 | String                     | Google Map Api Token                                                       |
+| mapLocale              | MapLocale                  | map's language used in search and other widgets                            |
+| getAddress             | Function(CompleteAddress)? | Method of Getting the address and position                                 |
+| initialPosition        | LatLng                     | Initial position of the map in case there's no location and GPS is off     |
+| enableMyLocationButton | bool                       | Enable or disable the My Location button                                   |
+| enableSearchButton     | bool                       | Enable or disable the Search button                                        |
+| loader                 | Widget                     | Widget to show while the map is loading                                    |
+| doneButton             | Widget?                    | Widget to show when the map is done loading and apply getResult method     |
+| errorButton            | Widget?                    | Widget to show when there's a corruption or there's no internet connection |
+| zoomFactor             | double                     | Zoom factor of the map (default is 5.0)                                    |
+| markerColor            | MarkerColor                | Marker color of the map (default is red)                                   |
 
 ### CompleteAddress Properties
 
@@ -184,11 +185,15 @@ Navigator.push(
 | position  | Position? | Position of the address |
 
 ### This package supports all platforms listed below.
-platforms:
-  android:
-  ios:
 
+platforms:
+android:
+ios:
 
 ## License
 
 MIT
+
+## Sponsors
+[Timmy Iwoni](https://twitter.com/codemaverick69)
+[Reconnaissance Technologies](https://reconnaissancetechnologies.com)
