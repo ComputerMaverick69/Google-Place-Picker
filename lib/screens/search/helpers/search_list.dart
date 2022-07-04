@@ -1,12 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:place_picker/helpers/localization/get_response_phrases_model.dart';
-import 'package:place_picker/helpers/localization/locale.dart';
-import 'package:place_picker/helpers/localization/response_phrases_model.dart';
-import 'package:place_picker/helpers/size_config.dart';
-import 'package:place_picker/models/map_view_model.dart';
-import 'package:place_picker/widgets/title_text_widget.dart';
+import 'package:google_place_picker/helpers/localization/get_response_phrases_model.dart';
+import 'package:google_place_picker/helpers/localization/locale.dart';
+import 'package:google_place_picker/helpers/localization/response_phrases_model.dart';
+import 'package:google_place_picker/models/map_view_model.dart';
+import 'package:google_place_picker/widgets/title_text_widget.dart';
 
 class SearchList extends StatelessWidget {
   const SearchList({
@@ -35,25 +34,25 @@ class SearchList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-          horizontal: SizeConfig.height30, vertical: SizeConfig.height10),
+      padding: const EdgeInsets.symmetric(
+          horizontal: 30.0, vertical: 10.0),
       child: !getSearched
           ? const SizedBox()
           : ClipRRect(
-              borderRadius: BorderRadius.circular(SizeConfig.radius15),
+              borderRadius: BorderRadius.circular(15.0),
               child: BackdropFilter(
                 filter: ImageFilter.blur(
-                    sigmaX: SizeConfig.width10, sigmaY: SizeConfig.height10),
+                    sigmaX: 10.0, sigmaY: 10.0),
                 child: Container(
                   decoration: BoxDecoration(
                     color: MediaQuery.of(context).platformBrightness ==
                             Brightness.light
                         ? Colors.white.withOpacity(0.25)
                         : Colors.black.withOpacity(0.25),
-                    borderRadius: BorderRadius.circular(SizeConfig.radius15),
+                    borderRadius: BorderRadius.circular(15.0),
                   ),
                   width: double.infinity,
-                  height: SizeConfig.height200 + SizeConfig.height150,
+                  height: 350.0,
                   child: isSearching
                       ? loader
                       : isError

@@ -1,3 +1,4 @@
+/// The response phrases model.
 class ResponsePhrasesModel {
   static const String noInternetConnection = "no_internet_connection";
   static const String tryAgain = "try_again";

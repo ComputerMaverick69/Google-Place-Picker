@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:place_picker/helpers/localization/locale.dart';
-import 'package:place_picker/screens/search/helpers/search_widget.dart';
+import 'package:google_place_picker/helpers/localization/locale.dart';
+import 'package:google_place_picker/screens/search/helpers/search_widget.dart';
 
 showSearchDialog(
   BuildContext context,

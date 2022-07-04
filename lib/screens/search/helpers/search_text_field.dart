@@ -1,9 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:place_picker/helpers/localization/get_response_phrases_model.dart';
-import 'package:place_picker/helpers/localization/locale.dart';
-import 'package:place_picker/helpers/localization/response_phrases_model.dart';
-import 'package:place_picker/helpers/size_config.dart';
+import 'package:google_place_picker/helpers/localization/get_response_phrases_model.dart';
+import 'package:google_place_picker/helpers/localization/locale.dart';
+import 'package:google_place_picker/helpers/localization/response_phrases_model.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({
@@ -34,21 +33,21 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-          horizontal: SizeConfig.width30, vertical: SizeConfig.height10),
+      padding: const EdgeInsets.symmetric(
+          horizontal: 30.0, vertical: 10.0),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(SizeConfig.radius10),
+        borderRadius: BorderRadius.circular(10.0),
         child: BackdropFilter(
           filter: ImageFilter.blur(
-              sigmaX: SizeConfig.width10, sigmaY: SizeConfig.height10),
+              sigmaX: 10.0, sigmaY: 10.0),
           child: Container(
-            height: SizeConfig.height60,
+            height: 60.0,
             decoration: BoxDecoration(
               color:
                   MediaQuery.of(context).platformBrightness == Brightness.light
                       ? Colors.white.withOpacity(0.25)
                       : Colors.black.withOpacity(0.25),
-              borderRadius: BorderRadius.circular(SizeConfig.radius10),
+              borderRadius: BorderRadius.circular(10.0),
             ),
             child: TextField(
               controller: searchController,
@@ -82,7 +81,7 @@ class SearchTextField extends StatelessWidget {
                 filled: true,
                 fillColor: Colors.transparent,
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(SizeConfig.radius15),
+                  borderRadius: BorderRadius.circular(15.0),
                   borderSide: BorderSide.none,
                 ),
               ),
@@ -138,8 +137,8 @@ class _ActionButton extends StatelessWidget {
             color: Theme.of(context).primaryColor,
           ),
         ),
-        SizedBox(
-          width: SizeConfig.width5,
+        const SizedBox(
+          width: 5.0,
         ),
         InkWell(
           onTap: () {
@@ -155,8 +154,8 @@ class _ActionButton extends StatelessWidget {
             color: Theme.of(context).primaryColor,
           ),
         ),
-        SizedBox(
-          width: SizeConfig.width5,
+        const SizedBox(
+          width: 5.0,
         ),
       ],
     );

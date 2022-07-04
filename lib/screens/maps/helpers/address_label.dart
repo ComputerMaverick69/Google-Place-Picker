@@ -1,10 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:place_picker/helpers/localization/get_response_phrases_model.dart';
-import 'package:place_picker/helpers/localization/locale.dart';
-import 'package:place_picker/helpers/localization/response_phrases_model.dart';
-import 'package:place_picker/helpers/size_config.dart';
-import 'package:place_picker/models/fetched_address_model.dart';
+import 'package:google_place_picker/helpers/localization/get_response_phrases_model.dart';
+import 'package:google_place_picker/helpers/localization/locale.dart';
+import 'package:google_place_picker/helpers/localization/response_phrases_model.dart';
+import 'package:google_place_picker/models/fetched_address_model.dart';
 
 class AddressLabel extends StatelessWidget {
   const AddressLabel(
@@ -29,24 +28,23 @@ class AddressLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: SizeConfig.height30),
+      padding: const EdgeInsets.only(bottom: 30.0),
       child: Align(
         alignment: Alignment.bottomCenter,
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(SizeConfig.radius20),
+          borderRadius: BorderRadius.circular(15.0),
           child: BackdropFilter(
-            filter: ImageFilter.blur(
-                sigmaX: SizeConfig.width10, sigmaY: SizeConfig.height10),
+            filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
             child: Container(
               alignment: Alignment.center,
-              width: SizeConfig.width200,
-              height: SizeConfig.height200 + SizeConfig.height200,
-              padding: EdgeInsets.all(SizeConfig.width20),
+              width: 300.0,
+              height: 400.0,
+              padding: const EdgeInsets.all(20.0),
               decoration: BoxDecoration(
                 color:
                     MediaQuery.of(context).platformBrightness == Brightness.dark
-                        ? Colors.black.withOpacity(0.25)
-                        : Colors.white.withOpacity(0.25),
+                        ? Colors.black.withOpacity(0.50)
+                        : Colors.white.withOpacity(0.50),
               ),
               child: loading
                   ? loader
@@ -60,7 +58,7 @@ class AddressLabel extends StatelessWidget {
                                 textScaleFactor: 1.0,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                  fontSize: SizeConfig.font20,
+                                  fontSize: 20.0,
                                   color: MediaQuery.of(context)
                                               .platformBrightness !=
                                           Brightness.dark
@@ -75,7 +73,7 @@ class AddressLabel extends StatelessWidget {
                                 textScaleFactor: 1.0,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                  fontSize: SizeConfig.font15,
+                                  fontSize: 15.0,
                                   color: MediaQuery.of(context)
                                               .platformBrightness !=
                                           Brightness.dark
@@ -97,10 +95,10 @@ class AddressLabel extends StatelessWidget {
                                         : Theme.of(context)
                                             .primaryColor
                                             .withOpacity(0.35),
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.close_rounded,
                                       color: Colors.red,
-                                      size: SizeConfig.width30,
+                                      size: 30.0,
                                     ),
                                   )
                               : done ??
@@ -111,7 +109,7 @@ class AddressLabel extends StatelessWidget {
                                     child: Icon(
                                       Icons.check,
                                       color: Theme.of(context).primaryColor,
-                                      size: SizeConfig.width30,
+                                      size: 30.0,
                                     ),
                                   ),
                         ),

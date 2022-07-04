@@ -1,6 +1,6 @@
 import 'package:geolocator/geolocator.dart';
 
-/// Complete Address Aodel which contains position & typed address
+/// Complete Address Model which contains position & fetched address
 class CompleteAddress {
   /// Position of the address
   Position? position;

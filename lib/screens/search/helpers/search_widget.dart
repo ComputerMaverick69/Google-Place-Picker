@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:place_picker/helpers/localization/locale.dart';
-import 'package:place_picker/models/map_view_model.dart';
+import 'package:google_place_picker/helpers/localization/locale.dart';
+import 'package:google_place_picker/models/map_view_model.dart';
 import 'search_list.dart';
 import 'search_text_field.dart';
 

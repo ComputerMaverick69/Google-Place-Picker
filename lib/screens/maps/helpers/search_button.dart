@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:place_picker/helpers/localization/locale.dart';
-import 'package:place_picker/helpers/size_config.dart';
-import 'package:place_picker/screens/search/search.dart';
+import 'package:google_place_picker/helpers/localization/locale.dart';
+import 'package:google_place_picker/screens/search/search.dart';
 import 'with_shadow_container.dart';
 
 class SearchButton extends StatelessWidget {
@@ -18,7 +17,7 @@ class SearchButton extends StatelessWidget {
 
   final dynamic addressLabelState;
 
-  /// Method which getting the location
+  /// Method which gets searched location
   final dynamic Function(LatLng) getLocation;
   final String apiKey;
   final Widget loader;
@@ -39,17 +38,14 @@ class SearchButton extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: EdgeInsets.all(SizeConfig.radius10),
+        padding: const EdgeInsets.all(10.0),
         child: withShadowDecoration(
           CircleAvatar(
-            radius: SizeConfig.radius20,
+            radius: 20.0,
             backgroundColor: Colors.transparent,
-            // backgroundColor: MediaQuery.of(context).platformBrightness == Brightness.light
-            //     ? Colors.white
-            //     : Colors.black,
             child: Icon(
               Icons.search,
-              size: SizeConfig.width20,
+              size: 20.0,
               color: Theme.of(context).primaryColor,
             ),
           ),

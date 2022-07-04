@@ -166,8 +166,8 @@ Navigator.push(
 | Parameter              | Type                   | Description                                                                |
 | ---------------------- | ---------------------- | -------------------------------------------------------------------------- |
 | apiKey                 | String                 | Google Map Api Token                                                       |
-| mapLanguage            | Language               | map's language used in search and other widgets                            |
-| getResult              | Function(FullAddress)? | Method of Getting the address and position                                 |
+| mapLocale            | MapLocale               | map's language used in search and other widgets                            |
+| getAddress              | Function(CompleteAddress)? | Method of Getting the address and position                                 |
 | initialPosition        | LatLng                 | Initial position of the map in case there's no location and GPS is off     |
 | enableMyLocationButton | bool                   | Enable or disable the My Location button                                   |
 | enableSearchButton     | bool                   | Enable or disable the Search button                                        |
@@ -177,12 +177,18 @@ Navigator.push(
 | zoomFactor             | double                 | Zoom factor of the map (default is 5.0)                                    |
 | markerColor            | MarkerColor            | Marker color of the map (default is red)                                   |
 
-### FullAddress Properties
+### CompleteAddress Properties
 
 | Parameter | Type      | Description             |
 | --------- | --------- | ----------------------- |
 | address   | String?   | Formatted address       |
 | position  | Position? | Position of the address |
+
+### This package supports all platforms listed below.
+platforms:
+  android:
+  ios:
+
 
 ## License
 

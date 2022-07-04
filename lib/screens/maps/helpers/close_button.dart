@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:place_picker/helpers/size_config.dart';
 import 'with_shadow_container.dart';
 
 class CloseMapButton extends StatelessWidget {
@@ -14,17 +13,17 @@ class CloseMapButton extends StatelessWidget {
         child: InkWell(
           onTap: () => Navigator.pop(context),
           child: Padding(
-            padding: EdgeInsets.all(SizeConfig.radius10),
+            padding: const EdgeInsets.all(10.0),
             child: withShadowDecoration(
               CircleAvatar(
-                radius: SizeConfig.radius20,
+                radius: 20.0,
                 backgroundColor: Colors.transparent,
                 // backgroundColor: MediaQuery.of(context).platformBrightness == Brightness.light
                 //     ? Colors.white
                 //     : Colors.black,
                 child: Icon(
                   Icons.cancel_outlined,
-                  size: SizeConfig.width25,
+                  size: 25.0,
                   color: Theme.of(context).primaryColor,
                 ),
               ),

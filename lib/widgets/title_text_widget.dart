@@ -1,7 +1,6 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:place_picker/helpers/size_config.dart';
 
 class TitleTextWidget extends StatelessWidget {
   final Color? titleColor;
@@ -29,7 +28,7 @@ class TitleTextWidget extends StatelessWidget {
           color: titleColor,
           fontWeight: FontWeight.w400,
           fontFamily: 'Klasik',
-          fontSize: titleSize == 0 ? SizeConfig.font20 : titleSize),
+          fontSize: titleSize == 0 ? 20.0 : titleSize),
     );
   }
 }

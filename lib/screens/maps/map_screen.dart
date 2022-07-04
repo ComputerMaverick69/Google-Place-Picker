@@ -5,16 +5,16 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart' as geocoding;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:place_picker/config/functions/on_camera_move.dart';
-import 'package:place_picker/config/functions/permission_checker.dart';
-import 'package:place_picker/config/unit_function.dart';
-import 'package:place_picker/helpers/localization/locale.dart';
-import 'package:place_picker/models/fetched_address_model.dart';
-import 'package:place_picker/screens/maps/helpers/address_label.dart';
-import 'package:place_picker/screens/maps/helpers/close_button.dart';
-import 'package:place_picker/screens/maps/helpers/map_view.dart';
-import 'package:place_picker/screens/maps/helpers/my_location_button.dart';
-import 'package:place_picker/screens/maps/helpers/search_button.dart';
+import 'package:google_place_picker/config/functions/on_camera_move.dart';
+import 'package:google_place_picker/config/functions/permission_checker.dart';
+import 'package:google_place_picker/config/unit_function.dart';
+import 'package:google_place_picker/helpers/localization/locale.dart';
+import 'package:google_place_picker/models/fetched_address_model.dart';
+import 'package:google_place_picker/screens/maps/helpers/address_label.dart';
+import 'package:google_place_picker/screens/maps/helpers/close_button.dart';
+import 'package:google_place_picker/screens/maps/helpers/map_view.dart';
+import 'package:google_place_picker/screens/maps/helpers/my_location_button.dart';
+import 'package:google_place_picker/screens/maps/helpers/search_button.dart';
 
 class GooglePlacePicker extends StatefulWidget {
   const GooglePlacePicker({
@@ -33,14 +33,14 @@ class GooglePlacePicker extends StatefulWidget {
     Key? key,
   }) : super(key: key);
 
-  /// Key for Google Maps API
+  /// Google Maps API Key
   final String apiKey;
 
-  /// [mapLanguage] is the property of [GooglePlacePicker] that controls search results language.
+  /// [mapLocale] is the property of [GooglePlacePicker] that controls search results MapLocale.
   ///
-  /// It's is a [Language] that can be either [Language.arabic] or [Language.english] and other languages.
+  /// It's is a [Locale] that its default locale is [MapLocale.english] but can use other supported MapLocales.
   ///
-  /// It's [Language.arabic] by default.
+  /// It's [MapLocale.english] by default.
   final MapLocale mapLocale;
 
   /// Method to get the position of the place on the map
@@ -167,10 +167,10 @@ class _GooglePlacePickerState extends State<GooglePlacePicker> {
       log('NotConnected: $notConnected');
     }
     final address = addressList.first;
-    completeAddress.completeAddress = "${address.street ?? ''}"
-        "${address.name ?? ''}"
-        "${address.locality ?? ''}"
-        "${address.postalCode ?? ''}"
+    completeAddress.completeAddress = "${address.street ?? ''},"
+        "${address.name ?? ''},"
+        "${address.locality ?? ''},"
+        "${address.postalCode ?? ''},"
         "${address.country ?? ''}";
     marker = customMarker(
       latLng,
@@ -189,14 +189,14 @@ class _GooglePlacePickerState extends State<GooglePlacePicker> {
     if (permission == LocationPermission.always ||
         permission == LocationPermission.whileInUse) {
       completeAddress.position = await Geolocator.getCurrentPosition();
-      getLocation(LatLng(
-          completeAddress.position!.latitude, completeAddress.position!.longitude));
+      getLocation(LatLng(completeAddress.position!.latitude,
+          completeAddress.position!.longitude));
     } else {
       await Geolocator.requestPermission();
       try {
         completeAddress.position = await Geolocator.getCurrentPosition();
-        getLocation(LatLng(
-            completeAddress.position!.latitude, completeAddress.position!.longitude));
+        getLocation(LatLng(completeAddress.position!.latitude,
+            completeAddress.position!.longitude));
         log('${completeAddress.position}');
       } catch (e) {
         getLocation(LatLng(

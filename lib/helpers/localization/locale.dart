@@ -3,9 +3,9 @@
 /// This enum is used to specify the language of the text to be translated.
 ///
 /// - The supported languages are: [arabic], [english], [spanish], [portuguese], [german], [french], [italian], [russian], [chinese], [korean], [japanese], [hindi], [persian].
-/// - The default language is [arabic].
-/// - The language is specified by the [languageCode] property.
-/// - in the future, we may add more languages.
+/// - The default language is [english].
+/// - The language is specified by the [locale] property.
+/// - More locales will be added for the future.
 enum MapLocale {
   arabic("ar"),
   english("en"),

@@ -1,7 +1,7 @@
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-/// Getting custom position
+/// Getting a specified custom position
 Position customPosition(LatLng latLng) => Position(
       longitude: latLng.longitude,
       latitude: latLng.latitude,
@@ -27,7 +27,7 @@ Marker customMarker(
       icon: colors[markerColor]!,
     );
 
-/// Colors map that returns the color of the marker
+/// Colours map that returns the colour of the marker
 Map<MarkerColor, BitmapDescriptor> colors = {
   MarkerColor.red:
       BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
@@ -51,7 +51,7 @@ Map<MarkerColor, BitmapDescriptor> colors = {
       BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueViolet),
 };
 
-/// Marker colors enum
+/// Marker colours enum
 enum MarkerColor {
   red,
   green,
