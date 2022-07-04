@@ -1,6 +1,6 @@
 name: google_place_picker
 description: A Google Maps place picker for flutter apps. This would help users select places and address on map. A typical use-case would be saving a user's address with gps coordinates for easy navigation.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/ComputerMaverick69/Place-Picker
 
 environment:
