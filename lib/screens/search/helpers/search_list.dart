@@ -34,15 +34,13 @@ class SearchList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-          horizontal: 30.0, vertical: 10.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
       child: !getSearched
           ? const SizedBox()
           : ClipRRect(
               borderRadius: BorderRadius.circular(15.0),
               child: BackdropFilter(
-                filter: ImageFilter.blur(
-                    sigmaX: 10.0, sigmaY: 10.0),
+                filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
                 child: Container(
                   decoration: BoxDecoration(
                     color: MediaQuery.of(context).platformBrightness ==
