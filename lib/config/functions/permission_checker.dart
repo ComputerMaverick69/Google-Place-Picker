@@ -7,9 +7,9 @@ dynamic checkPermission(Future<dynamic> getCurrentLocation) async {
   Geolocator.checkPermission().then((geoStatus) {
     log("Location: $geoStatus");
     if (geoStatus == LocationPermission.denied) {
-      Permission.location.request().then((_) => getCurrentLocation);
+      return Permission.location.request().then((_) => getCurrentLocation);
     } else {
-      getCurrentLocation;
+      return getCurrentLocation;
     }
   });
 }
