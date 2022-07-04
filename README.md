@@ -24,7 +24,7 @@ A Google Maps Place Picker for Flutter apps
 
 ## Demo Preview
 
-![](preview/Google-Place-Picker-Demo.gif)
+![](https://github.com/ComputerMaverick69/Google-Place-Picker/blob/main/preview/Google-Place-Picker-Demo.gif)
 
 ## Getting Started
 
