@@ -3,5 +3,7 @@
 - Initial release.
 
 ## 1.0.1
-- Bug fixes
-- Removed unused dependencies
+
+- Bug fixes.
+- Removed unused dependencies.
+- Improved code.
