@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_place_picker/models/fetched_address_model.dart';
-import 'package:google_place_picker/screens/maps/map_screen.dart';
+import 'package:google_place_picker/google_place_picker.dart';
 
 void main() {
   runApp(const MyApp());
@@ -68,8 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => GooglePlacePicker(
-                      apiKey: 'AIzaSyA0RRVpdsvXCxNo_FTMkOQ8wxl97-L3H0U',
-                      getAddress: (CompleteAddress completeAddress) {
+                      apiKey: 'YOUR_API_KEY',
+                      getAddress: (completeAddress) {
                         setState(() {
                           address = completeAddress.completeAddress.toString();
                           city = completeAddress.city.toString();

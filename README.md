@@ -89,6 +89,23 @@ To set up, specify your API key in the application delegate `ios/Runner/AppDeleg
 
 Specify your API key in the application delegate `ios/Runner/AppDelegate.swift`:
 
+```
+#include "AppDelegate.h"
+#include "GeneratedPluginRegistrant.h"
+#import "GoogleMaps/GoogleMaps.h"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [GMSServices provideAPIKey:@"YOUR KEY HERE"];
+  [GeneratedPluginRegistrant registerWithRegistry:self];
+  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+@end
+```
+
+Or in your swift code, specify your API key in the application delegate `ios/Runner/AppDelegate.swift`:
 ```swift
 import UIKit
 import Flutter

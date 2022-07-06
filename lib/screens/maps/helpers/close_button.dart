@@ -17,7 +17,7 @@ class CloseMapButton extends StatelessWidget {
             child: withShadowDecoration(
               CircleAvatar(
                 radius: 20.0,
-                backgroundColor: Colors.transparent,
+                backgroundColor: Colors.blueGrey[200],
                 // backgroundColor: MediaQuery.of(context).platformBrightness == Brightness.light
                 //     ? Colors.white
                 //     : Colors.black,

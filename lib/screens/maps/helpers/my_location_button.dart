@@ -22,7 +22,7 @@ class CurrentLocationButton extends StatelessWidget {
             child: withShadowDecoration(
               CircleAvatar(
                 radius: 20.0,
-                backgroundColor: Colors.transparent,
+                backgroundColor: Colors.blueGrey[200],
                 child: Icon(
                   Icons.my_location_outlined,
                   size: 25.0,

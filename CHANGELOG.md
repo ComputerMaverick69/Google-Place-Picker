@@ -1,6 +1,6 @@
 ## 1.0.2
 
-- Address Overlay opacity fixed
+- Bug fixes.
 
 ## 1.0.1
 
