@@ -34,7 +34,7 @@ class AddressLabel extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15.0),
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+            filter: ImageFilter.blur(sigmaX: 30.0, sigmaY: 30.0),
             child: Container(
               alignment: Alignment.center,
               width: 300.0,
@@ -43,8 +43,8 @@ class AddressLabel extends StatelessWidget {
               decoration: BoxDecoration(
                 color:
                     MediaQuery.of(context).platformBrightness == Brightness.dark
-                        ? Colors.black.withOpacity(0.50)
-                        : Colors.white.withOpacity(0.50),
+                        ? Colors.black.withOpacity(1.0)
+                        : Colors.white.withOpacity(1.0),
               ),
               child: loading
                   ? loader
