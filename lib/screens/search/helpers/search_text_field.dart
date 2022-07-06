@@ -33,13 +33,11 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-          horizontal: 30.0, vertical: 10.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10.0),
         child: BackdropFilter(
-          filter: ImageFilter.blur(
-              sigmaX: 10.0, sigmaY: 10.0),
+          filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
           child: Container(
             height: 60.0,
             decoration: BoxDecoration(

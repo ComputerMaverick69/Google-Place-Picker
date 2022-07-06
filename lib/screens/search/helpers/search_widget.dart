@@ -81,7 +81,8 @@ class _SearchWidgetState extends State<SearchWidget> {
         // 'https://maps.googleapis.com/maps/api/place/textsearch/json',
         'https://maps.googleapis.com/maps/api/place/findplacefromtext/json',
         queryParameters: {
-          'fields':'formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry',
+          'fields':
+              'formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry',
           'input': keyword,
           'inputtype': 'textquery',
           'key': apiKey,
