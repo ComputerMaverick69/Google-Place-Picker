@@ -149,13 +149,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.1"
-  get:
-    dependency: transitive
-    description:
-      name: get
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "4.6.5"
   google_maps_flutter:
     dependency: transitive
     description:
@@ -176,7 +169,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.0"
+    version: "1.0.2"
   http_parser:
     dependency: transitive
     description:

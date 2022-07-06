@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => GooglePlacePicker(
-                      apiKey: 'YOUR_API_KEY_HERE',
+                      apiKey: 'AIzaSyA0RRVpdsvXCxNo_FTMkOQ8wxl97-L3H0U',
                       getAddress: (CompleteAddress completeAddress) {
                         setState(() {
                           address = completeAddress.completeAddress.toString();
